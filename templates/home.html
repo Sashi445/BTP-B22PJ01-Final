@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="my-5">
+    <p class="mb-4 display-6 text-center">
+        Welcome to 3D object reconstructor
+    </p>
+    <p class="text-center">
+        The model takes in a 3D object data in form of <strong>.off</strong> format
+        and classifies the model into one of the classes and reconstructs a mesh model 
+        that can be further used in applications like unity, blender etc. It was based on <a href="http://stanford.edu/~rqi/pointnet/" target="_blank" rel="noopener noreferrer"><strong>pointnet</strong></a> paper.
+    </p>
+</div>
+
+<div class="container p-6">
+    <form class="p-6 mb-5 border border-primary rounded" action="" method="post" enctype="multipart/form-data">
+        <div class="container mb-5 py-6">
+            <label class="form-label" for="3Dobject">Choose your 3D object data</label>
+            <input type="file" class="form-control" id="3Dobject"  name="3Dobject" placeholder="Choose your 3D model">
+        </div>
+        <div class="container text-end">
+            <input class="btn btn-sm btn-primary" type="submit" value="POST">
+        </div>
+    </form>
+</div>
+
+{% endblock %}

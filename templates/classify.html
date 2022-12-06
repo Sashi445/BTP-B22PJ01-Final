@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container py-6">
+    <p class="text-center" style="font-size: 2rem;" >
+        Your model is classified as : <strong>{{ label }}</strong>
+    </p>
+    <div class="container">
+        <p class="text-center">
+            Download the converted Mesh model from here : <a href="{{ url_for('download', filename=filename ) }}">Link</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
